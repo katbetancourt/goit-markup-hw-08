@@ -1,0 +1,85 @@
+@import "./utils/variables";
+@import "./utils/extends";
+@import "./utils/mixins";
+
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/whatWeDo";
+@import "./components/team";
+@import "./components/customers";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/portfolio-menu";
+@import "./components/portfolio-cards";
+@import "./components/mobile-menu";
+@import "./components/navbar";
+@import "./components/booking";
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+   color: $brand-color-text;
+   font-family: 'Roboto', sans-serif;
+   font-size: 14px;
+   letter-spacing: 0.03em;
+   line-height: 1.7;
+ }
+
+
+ a {
+   text-decoration: none;
+ }
+
+ ul {
+   list-style:none;
+ }
+ 
+
+ h1 { 
+   color: $brand-color-white-text;
+   font-weight: 900;
+   font-size: 44px;
+   line-height: 1.3;
+   letter-spacing: 0.06em;
+   text-transform: uppercase;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   width: 700px;
+
+ }
+
+ h3 {
+   line-height: 1.14;
+   color: $brand-color-highlight;
+ }
+
+ h4 {
+   color: $brand-color-highlight;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.18;
+   text-align: center;
+ }
+
+ section {
+   padding-top: 94px;
+   padding-bottom: 94px;
+
+ }
+
+    .logo {
+   font-family: 'Raleway';
+   font-size: 26px;
+   color: $brand-color-blue;
+   line-height: 1.19;
+   
+
+   }
+

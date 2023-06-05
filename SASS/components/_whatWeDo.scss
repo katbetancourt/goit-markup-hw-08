@@ -1,0 +1,64 @@
+.image {
+   width: $width-section;
+   padding: 0px 200px 94px 200px;
+
+   &__container {
+      max-width: $max-width-section;
+      padding: 0px 15px;
+      margin: 0px auto;
+   }
+
+
+
+   &__tittle {
+      font-size: 36px;
+      line-height: 1.17;
+      color: $brand-color-highlight;
+      text-align: center;
+   }
+
+
+
+   .what-we-do {
+      align-items: center;
+      gap: 50px;
+   }
+
+
+   &__display {
+      @include flex(flex, center);
+      gap: 24px;
+   }
+
+
+
+   &__decoration {
+      display: flex;
+   }
+
+
+   &__text--container {
+      background: rgba(47, 48, 58, 0.8);
+      width: 373px;
+      height: 70px;
+      margin-top: 253px;
+      position: absolute;
+
+   }
+
+   &__text {
+      color: $brand-color-white-text;
+      font-size: 14px;
+      line-height: 1.1;
+      text-align: center;
+
+      padding-top: 16px;
+   }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1200px) {
+   .image {
+      display: none;
+   }
+}

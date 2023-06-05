@@ -1,0 +1,179 @@
+// .backdrop {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    position: fixed;
+//    width: $width-section;
+//    height: 100vh;
+//    top:0;
+//    left:0;
+
+//    background: rgba(0, 0, 0, 0.2);
+
+//    transform: translateY(0);
+//    transition: 250ms ease;
+//    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// }
+
+// .backdrop.is-hidden {
+//    visibility:hidden;
+//    opacity: 0;
+//    pointer-events:none;
+
+//    transform: translateY(-105%);
+//    transition: 250ms ease;
+//    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// }
+
+
+// .modal {
+//  position: relative;
+//  width: 528px;
+//  height: 581px;
+//  background-color: $brand-color-white-text;
+//  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+//  border-radius: 4px;
+//  padding: 40px;
+// }
+
+
+// .backdrop .modal__backdrop-button {
+//    position: absolute;
+//    width: 30px;
+//    height: 30px;
+//    border-radius: 15px;
+
+//    font-size: 15px;
+
+//    background: #FFFFFF;
+//    border: 1px solid rgba(0, 0, 0, 0.1);
+   
+//    cursor: pointer;
+//    right: 8px;
+//    top:8px;
+// }
+
+// .modal__backdrop-button:hover {
+//    color:$brand-color-blue;
+// }
+
+
+/* -----------------------------modal window content-------------------------*/
+
+
+
+
+//  .form__tittle {
+//    font-size: 20px;
+// }
+
+// .form {
+//    position: relative;
+// }
+
+
+// .form .form__input {
+//    display: block;
+//    outline: none;
+//    font-size: 12px;
+//    height: 40px;
+//    width: 100%;
+//    border: 1px solid rgba(33, 33, 33, 0.2);
+//    border-radius: 4px;
+//    padding-left: 40px;
+//    gap: 20px;
+
+//    transition: 250ms ease;
+//    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .form .form__input:hover, 
+// .form .form__input:focus  {
+//    border: 1px solid $brand-color-blue;
+// }
+
+
+
+
+// .form .form__svg {
+//    position: absolute;
+//    top: 12px;
+//    left: 15px;
+//    width: 18px;
+//    height: 18px;
+//    fill: #212121;
+//    cursor: pointer;
+// }
+
+// .form .form__input:hover + .form__svg,
+// .form .form__input:focus + .form__svg {
+//    fill: $brand-color-blue;
+// }
+
+
+
+// .form__textarea {
+//    display: block;
+//    outline: none;
+//    resize: none;
+
+//    width: $width-section;
+//    height: 120px;
+
+//    border: 1px solid rgba(33, 33, 33, 0.2);
+//    border-radius: 4px;
+
+//    padding-left: 15px;
+//    padding-top: 16px;
+
+//    transition: 250ms ease;
+//    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+
+// .form__textarea:hover,
+// .form__textarea:focus {
+//    border: 1px solid $brand-color-blue;
+// }
+
+
+
+// .form__checkbox {
+// display: inline-block;
+// position: relative;
+// margin-top: 20px;
+// padding-left: 8px;
+// cursor: pointer;
+// }
+
+
+// .form__button-input {
+//    position:absolute;
+//    left: 160px;
+//    top: 500px;
+
+//    width: 200px;
+//    height: 50px;
+
+//    background-color: $brand-color-blue;
+//    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//    border-radius: 4px;
+//    border: none;
+
+//    color:$brand-color-white-text;
+
+//    cursor: pointer;
+
+//    transition: 250ms ease;
+//    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+// }
+
+
+// .form__button-input:focus,
+// .form__button-input:hover {
+//    background: #188CE8;
+//    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//    border-radius: 4px;
+// }

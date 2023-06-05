@@ -1,0 +1,164 @@
+.footer {
+   background-color: $brand-color-grey;
+   padding: 60px 0px;
+
+   &__container {
+      max-width: $max-width-section;
+      padding: 0px 15px;
+      margin: 0px auto;
+   }
+
+
+   &__content {
+      @include flex(center, flex-start);
+      flex-wrap: wrap;
+      gap: 70px;
+   }
+
+   &__logo {
+      font-style: normal;
+   }
+
+
+   &__address {
+      font-style: normal;
+      color: $brand-color-white;
+   }
+
+   &__contact {
+      color: $footer-link;
+      font-style: normal;
+   }
+
+
+   &__link {
+      color: $footer-link;
+   }
+
+
+   &__link:focus,
+   &__link:hover {
+      color: $brand-color-blue;
+   }
+
+
+
+   &__text {
+      color: $brand-color-white-text;
+   }
+
+
+
+   &__text-container {
+      @include flex(center, center);
+      gap: 10px;
+
+   }
+
+
+   &__icon--link {
+      @include flex(center, center);
+      border-radius: 25px;
+      height: 44px;
+      width: 44px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.1);
+
+   }
+
+
+   &__icon--link:focus,
+   &__icon--link:hover {
+      background-color: $brand-color-blue;
+   }
+
+
+
+   &__icon {
+      width: 20px;
+      height: 20px;
+      fill: $brand-color-white-text;
+   }
+
+
+
+
+
+
+   &__newsletter-tittle {
+      color: $brand-color-white-text;
+      padding-right: 316px;
+   }
+
+
+
+   &__newsletter-group {
+      @include flex(center, center);
+      flex-wrap: wrap;
+      gap: 12px;
+   }
+
+
+   &__newsletter-form-input {
+      outline: none;
+      height: 50px;
+      width: 358px;
+      color: $brand-color-white-text;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: #2F303A;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      padding-left: 16px;
+   }
+
+   &__newsletter-button {
+      @include flex(center, center);
+      
+      gap: 30px;
+
+      background-color: $brand-color-blue;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      color: $brand-color-white-text;
+      font-size: 16px;
+
+      height: 50px;
+      width: 200px;
+
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      transition: 250ms ease;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+
+   &__newsletter-button:focus,
+   &__newsletter-button:hover {
+      background: #188CE8;
+
+   }
+
+   &__newsletter-icon {
+      width: 24px;
+      height: 24px;
+   }
+
+}
+
+@include screen-480 {
+   .footer {
+      &__content  {
+         display:flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center; 
+      }
+      
+      &__newsletter-tittle {
+      color: $brand-color-white-text;
+      padding-right: 10px ;
+     
+   }
+   }
+}

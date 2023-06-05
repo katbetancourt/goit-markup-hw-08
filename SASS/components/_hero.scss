@@ -1,0 +1,65 @@
+.hero { 
+@include flex(center, center);
+
+flex-direction: column;
+background-color: $brand-color-grey;
+height: 600px;
+    
+background-image: linear-gradient( to right, 
+rgba(47, 48, 58, 0.4), 
+rgba(47, 48, 58, 0.4)),
+url(../images/imagen17.jpg);
+background-color: #c4c4c4;
+
+&__text {
+   color: $brand-color-white-text;
+   font-weight: 900;
+   font-size: 44px;
+   line-height: 1.3;
+   text-align: center;
+   width: 700px;
+   }    
+   
+
+&__button {
+   @extend .main-button
+}
+
+&__button:focus,
+&__button:hover  {
+     background:$brand-color-blue;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     border-radius: 4px; 
+}
+
+    }
+
+
+
+@include screen-480 {
+    .hero {
+        &__text {
+            width: 70%;
+            font-size: 26px;
+        }
+
+        &__button {
+            min-width: 200px;
+        }
+
+    }
+}
+
+@media 
+screen and (max-width: 480px),
+screen and (min-device-pixel-ratio:2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+   .hero {
+background-image: linear-gradient( to right, 
+rgba(47, 48, 58, 0.4), 
+rgba(47, 48, 58, 0.4)),
+url(../images/img480@2x.jpg);
+
+   }
+}

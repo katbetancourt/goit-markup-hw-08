@@ -1,0 +1,39 @@
+.pageMenu {
+   width: $width-section;
+   padding-top: 94px;
+   padding-bottom: 50px;
+   /* padding: 94px 200px 34px 200px; */
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+   }
+
+   &__button {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+      color: $brand-color-highlight;
+      background-color: $brand-color-secondary-white;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      padding: 6px 24px;
+   }
+
+
+   &__button:focus,
+   &__button:hover {
+      background-color: $brand-color-blue;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      color: $brand-color-white-text;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.6;
+   }
+}
