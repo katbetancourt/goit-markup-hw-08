@@ -162,3 +162,16 @@
    }
    }
 }
+
+@include screen-768 {
+  .footer {
+    height: 100%;
+    padding: 75px;
+
+    .footer__content {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

@@ -1,36 +1,50 @@
-// .navbar {
-//   @include flex(center, center);
-//   gap: 93px;
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 
-//   &__menu {
-//     @include flex(center, center);
+  .header__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $brand-color-highlight;
+    outline: none;
+    position: relative;
+  }
 
-//     position: relative;
+  .header__link.selected {
+    color: $brand-color-blue;
+  }
 
-//     gap: 50px;
-//     font-weight: 500;
-//     color: $brand-color-highlight;
-//     letter-spacing: 0.02em;
-//     line-height: 1.14;
-//   }
+  .header__link--selected::after {
+    content: "";
+    background-color: $brand-color-blue;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 28px);
+    width: 100%;
+    height: 4px;
+  }
 
-//   .navbar__link {
-//     color: $brand-color-highlight;
-//   }
+  .header__link--selected:active {
+    color: $brand-color-blue;
+  }
 
-//   .navbar.slected::after {
-//     content: "";
-//     background-color: var(--brand-primary-blue-color);
-//     position: absolute;
-//     left: 0%;
-//     top: calc(100% + 28px);
-//     width: 100%;
-//     height: 4px;
-//   }
+  .header__link:focus,
+  .header__link:hover {
+    color: $brand-color-blue;
+  }
+}
 
-//   &__link:hover,
-//   &__link:focus,
-//   &__link--current {
-//     color: $brand-color-blue;
-//   }
-// }
+
+
+@include screen-480 {
+  .header__link {
+    display: none;
+  }
+}
+
+
+
+@include screen-768;

@@ -51,15 +51,46 @@ background-color: #c4c4c4;
 }
 
 @media 
-screen and (max-width: 480px),
-screen and (min-device-pixel-ratio:2),
-screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
-   .hero {
-background-image: linear-gradient( to right, 
-rgba(47, 48, 58, 0.4), 
-rgba(47, 48, 58, 0.4)),
-url(../images/img480@2x.jpg);
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
 
-   }
+    .hero{
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/bgstudio@2x.jpg);
+    }
+
+}
+
+@include screen-480 {
+  .hero {
+    height: 400px;
+    background-size: cover;
+
+    .hero__text {
+      width: 360px;
+      font-size: 26px;
+      line-height: 42px;
+    }
+  }
+}
+
+// Media query 768----------------------------
+
+@include screen-768 {
+  .hero {
+    height: 400px;
+    background-size: cover;
+    width: 100%;
+
+    .hero__text {
+      width: 360px;
+      font-size: 26px;
+      line-height: 42px;
+    }
+  }
 }

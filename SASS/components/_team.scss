@@ -1,132 +1,143 @@
 .team {
-   background-color: $brand-color-secondary-white;
-   width: $width-section;
-   /* padding: 94px 200px;  */
+  padding: 94px 0;
+  background: $brand-color-secondary-white;
 
-   .team__container { 
-   max-width: $max-width-section;
-   padding: 0px 15px;
-   margin: 0px auto;
-
-}
-
-   &__tittle {
-   font-size: 36px;
-   line-height: 1.17;
-   color: $brand-color-highlight;
-   text-align: center;
-   }
-
-
-   &__card {
-   display: flex;
-   flex-wrap: wrap;
-   // justify-content: center;
-   gap: 30px;
-    
+  .team__title {
+    height: 42px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $brand-color-highlight;
+    margin-bottom: 50px;
+    margin-top: 0;
   }
 
-
-   &__photo {
-   background-color: $brand-color-white-text;
-   width: 270px;
-   height: 428px;
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-   border-radius: 0px 0px 4px 4px;
-//    background-repeat: no-repeat, no-repeat;
-   
-  
-   }
-
-   &__job-tittle { 
-   font-size: 16px;
-   line-height: 1.18;
-   text-align: center;
-   }
-
-
-   &__icon--container {
-  @include flex(flex, center);
-   padding-bottom: 30px;
-   gap: 10px;
-   }
-
-
-   &__icon--container &__icon--link {
-   @include flex(center, center);
-   border-radius: 25px;
-   height: 44px;
-   width: 44px;
-   outline: none;  
-   }
-
-
-
-   &__icon--container &__icon--link:focus,
-   &__icon--container &__icon--link:hover {
-   background: $brand-color-blue;  
-   }
-
-
-   &__icon {
-   width: 20px;
-   height: 20px;
-   fill: #AFB1B8;
-   }
-
-
-   &__icon--container &__icon--link:focus &__icon,
-   &__icon--container &__icon--link:hover &__icon {
-   fill: #ffffff;
+  .team__container {
+    @include container;
   }
 
+  .team__list {
+    display: flex;
+    justify-content: center;
+
+    .group__768 {
+      // width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .team__card {
+        text-align: center;
+        background: $brand-color-white-text;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+          0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        width: 270px;
+
+        .card__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .team__card {
+    text-align: center;
+    background: $brand-color-white-text;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 270px;
+    margin: 0 15px;
+
+    .card__img {
+      width: 100%;
+    }
+  }
+
+  .social__icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 30px;
+  }
+
+  .social__icons .icons__link {
+    @include flex(center, center);
+    border-radius: 25px;
+    height: 44px;
+    width: 44px;
+    outline: none;
+  }
+
+  .social__icons .icons__link:focus,
+  .social__icons .icons__link:hover {
+    background-color: $brand-color-blue;
+  }
+
+  .social__icons .icons__link .icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: $icons-grey;
+  }
+
+  .social__icons .icons__link:focus .icon,
+  .social__icons .icons__link:hover .icon {
+    fill: $brand-color-white-text;
+  }
 }
 
-// @include screen-480 {
-//     .team {
-//         width: 480px;
-//         height: 2761px;
-
-       
-//         &__photo {
-//    width: 450px;
-//    height: 622px;
-   
-//    }
-//     }
-
-// }
-
+// Media query 480----------------------------
 
 @include screen-480 {
-    .team {
-    &__card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
+  .team .team__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 
-    &__photo {
+    .group__768 {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+
+
+
+      
+
+      .team__card {
         width: 100%;
+
+        .card__img {
+          width: 100%;
+        }
+      }
     }
-    
-    }
+  }
 }
 
-
+// Media query 768----------------------------
 
 @include screen-768 {
-    .team{
-        &__card {
-   display: flex;
-   justify-content: center;
+  .team .team__list {
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
-  &__photo {
+  .group__768 {
+    display: flex;
+    justify-content: center;
+
+    .team__card {
+      @include flex(center, center, column);
+      width: 354px;
+      margin: 0 15px;
+
+      .card__img {
         width: 100%;
+      }
     }
-
-    }
-
+  }
 }

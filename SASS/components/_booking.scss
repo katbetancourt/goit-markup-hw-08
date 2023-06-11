@@ -1,41 +1,54 @@
-// .booking {
-//    display: flex;
-//    @include flex(center, center);
-   
-//    position: absolute;
-//    left:800px;
-//    gap:50px;
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 
-//    &__link {
-//    font-weight: 500;
-//    letter-spacing: 0.02em;
-//    line-height: 1.14;
-//    color: $brand-color-text;
-//    }
+  .contact__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $brand-color-text;
+    outline: none;
+    position: relative;
+  }
 
-//    &__icon {
-//    fill: $brand-color-text;
-//    stroke: $brand-color-text;
-//    }
+  .contact__icon {
+    stroke: $brand-color-text;
+    cursor: pointer;
+  }
 
+  .contact__icon--email {
+    width: 16px;
+    height: 12px;
+  }
 
-//    &__icon--email {
-//    width: 16px;
-//    height: 12px;
-//    }
+  .contact__icon--smartphone {
+    width: 10px;
+    height: 16px;
+  }
 
+  .contact__link:hover,
+  .contact__link:focus .contact__link--smartphone {
+    color: $brand-color-blue;
+    fill: $brand-color-blue;
+  }
+}
 
-//    &__icon--telephone {
-//    width: 10px;
-//    height: 16px;
-//    }
+// Media query 480----------------------------
 
+@include screen-480 {
+  .header__contact {
+    display: none;
+  }
+}
 
-   
-//    &__link:hover,
-//    &__link:focus,
-//    &__link:hover &__icon {
-//    color: $brand-color-blue;
-//    stroke: $brand-color-blue;
-//    }
-// }
+// Media query 768----------------------------
+
+@include screen-768 {
+  .header__contact {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
