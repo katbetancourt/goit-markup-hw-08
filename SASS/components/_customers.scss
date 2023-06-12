@@ -1,57 +1,95 @@
-.cust {
-   width: $width-section;
-   
-   
+.customers {
+  padding: 94px 0;
 
-   &__container {
-      max-width: $max-width-section;
-      padding: 0px 15px;
-      margin: 0px auto;
-      
-      
-   }
+  .customers__title {
+    height: 42px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $brand-color-highlight;
+    margin-bottom: 50px;
+    margin-top: 0;
 
+    .customers__container {
+      @include container;
+    }
+  }
 
-   &__tittle {
-      font-size: 36px;
-      line-height: 1.17;
-      color: $brand-color-highlight;
-      text-align: center;
-   }
+  .customers__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
 
+  .customer__logo {
+    width: 170px;
+    height: 92px;
+    border: 1px solid $icons-grey;
+  }
 
-   &__section-logo {
-      @include flex(center, center);
-      display: flex;
-      flex-wrap: wrap;
+  .customer__logo:focus,
+  .customer__logo:hover {
+    border: 1px solid $brand-color-blue;
+  }
+
+  .customer__logo .icon {
+    width: 106px;
+    height: 60px;
+    margin: 16px 32px;
+    fill: $icons-grey;
+  }
+
+  .customer__logo:hover .icon,
+  .customer__logo:focus .icon {
+    fill: $brand-color-blue;
+  }
+}
+
+// Media query 480----------------------------
+
+@include screen-480 {
+  .customers__list {
+    flex-wrap: wrap;
+
+    .group__768 {
       gap: 30px;
-   }
+      display: flex;
+      flex-direction: column;
 
-   &__logo-container &__logo-link {
-      @include flex(center, center);
+      .customer__logo {
+        width: 210px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Media query 768----------------------------
+
+@include screen-768 {
+  .customers__list {
+    flex-wrap: wrap;
+
+    .group__768 {
+      gap: 30px;
+    }
+    .customer__logo {
+      width: 226px;
+      text-align: center;
+    }
+  }
+}
+
+@include screen-1200 {
+  .customers__list {
+    @include container;
+
+    .customer__logo {
       width: 170px;
-      height: 81px;
-      border: 1px solid #AFB1B8;
-      border-radius: 4px;
-   }
-
-   &__logo-container &__logo-link:focus,
-   &__logo-container &__logo-link:hover {
-      border: 1px solid $brand-color-blue;
-      outline: $brand-color-blue;
-   }
-
-
-   &__logo {
-      fill: #AFB1B8;
-      width: 106px;
-      height: 53px;
-   }
-
-
-   &__logo-container &__logo-link:focus &__logo,
-   &__logo-container &__logo-link:hover &__logo {
-      fill: $brand-color-blue;
-   }
-
+      text-align: center;
+      margin: 0 1px;
+    }
+  }
 }
