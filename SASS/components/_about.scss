@@ -71,14 +71,8 @@
 @include screen-480 {
     .about {
 
-//        &__display {
-//    padding-left: 0px;
-//    padding-right: 100px;
-
-    
-// }
         &__icon--bg {
-   width: 450px;
+   width: 100%;
 }
 
 &__tittle {
@@ -86,11 +80,33 @@
 }
 
         &__card {
-   width: 450px;
+   width: 100%;
 }
 
     }
 }
 
 
+@include screen-768 {
+   .about__container {
+      .about__display {
+         flex-wrap: wrap;
+      }
 
+      .about__card {
+         width: 354px;
+      }
+
+      .about__icon--bg {
+         width: 100%;
+      }
+      
+   }
+}
+
+
+@include screen-1200 {
+   .about {
+      flex-wrap: wrap;
+   }
+}
